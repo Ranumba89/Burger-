@@ -1,0 +1,57 @@
+<div style="padding: 20px; );">
+<h1>Burger!</h1>
+
+<h2>Devour Burgers!</h2>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-bordered">
+        <tbody>
+          {{#each unDevoured}}
+          <tr>
+            <td>
+              <span class="text-left">
+              {{burger_name}}
+              </span>
+             <div class="text-right">
+                <button class="change-burger" data-id="{{id}}" data-burgername="{{burger_name}}">
+                devour
+              </button>
+             </div>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <table class="table table-bordered">
+        <tbody>
+          {{#each devoured}}
+          <tr style="background:#f7f4f4">
+            <td>
+          <div >
+              {{burger_name}}
+
+          </div>              
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="bg">Burger Name:</label>
+    <input type="text" id="bg" name="name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
+</div>
+
+
